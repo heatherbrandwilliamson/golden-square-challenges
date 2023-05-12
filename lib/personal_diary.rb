@@ -4,4 +4,3 @@ def make_snippet(string)
     snippet += '' if words.length > 5
     snippet
 end
-
