@@ -57,9 +57,9 @@ RSpec.describe "estimate reading time for a text" do
     result = Reading_text(text) 
       expect(result).to eq 3 # equates to 5 mins.
     end 
-    it "returns empty string" do 
+    it "returns zero if empty string" do 
     text = "" 
     result = Reading_text(text) 
-      expect(result).to eq 0 # equates to 5 mins.
+      expect(result).to eq 0 # equates to 0 mins.
     end   
 end 
