@@ -14,5 +14,3 @@ def check_grammar(string)
     end
     return check_capital + check_punctuation
 end 
-
-puts check_grammar("Hello world!")
