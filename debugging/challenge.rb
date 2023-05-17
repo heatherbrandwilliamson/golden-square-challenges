@@ -1,6 +1,6 @@
 def get_most_common_letter(text)
     counter = Hash.new(0)
-    text.gsub(/\s+/, "").chars.each do |char|
+    text.gsub(/\s+/, "").chars.each do |char|  # strip white space from text here 
       counter[char] += 1
     end
     counter = counter.sort_by { |k, v| -v }
