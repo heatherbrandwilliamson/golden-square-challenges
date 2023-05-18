@@ -24,23 +24,21 @@ RSpec.describe @DiaryEntry do
             expect(diary_entry1.reading_time(200)).to eq 3
         end
       end
-
+     
       context "given a wpm of 0" do
         it "fails" do
             diary_entry1 = DiaryEntry.new("my_title", "one two three")
             expect { diary_entry.reading_time(0)}.to raise_error "Reading speed must be above zero"
         end
       end
+    end
+    
     describe "@reading chunk" do 
       context "it returns the a chunk of words from a wpm" do 
         it "returns all the words" do 
             diary_entry1 = DiaryEntry.new("my_title", "here are some words")
             expect(diary_entry.reading_chunk(200, 2)).to eq "here are some words"
         end
+      end  
     end
-
-
-
-end 
-
-
+end
