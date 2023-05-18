@@ -9,5 +9,3 @@ def check_to_do(string)
     end
     return answer
 end
-
-puts check_to_do("#TODO Water the plants on thursday")
