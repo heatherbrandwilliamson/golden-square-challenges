@@ -2,6 +2,7 @@ class DiaryEntry
     def initialize(title, contents) # title, contents are strings
       @title = title
       @contents = contents
+      @furtherst_read_read
     end
   
     def title
@@ -33,21 +34,10 @@ class DiaryEntry
   def reading_chunk(wpm, minutes)
     words_read_1 = wpm * minutes
     array = contents.split(" ")
-    array = array[0...words_read_1]
+    array = array[0, words_read_1]
     return array
-    words_read_2 = words_read_1...words_read_2
-    
-    
-    # `wpm` is an integer representing the number
-                                  # of words the user can read per minute
-                                  # `minutes` is an integer representing the
-                                  # number of minutes the user has to read
-    # Returns a string with a chunk of the contents that the user could read
-    # in the given number of minutes.
-    # If called again, `reading_chunk` should return the next chunk, skipping
-    # what has already been read, until the contents is fully read.
-    # The next call after that it should restart from the beginning.
   end
+
 end
 
 
